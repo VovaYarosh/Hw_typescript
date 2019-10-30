@@ -1,7 +1,7 @@
 
 import {Human} from "./Human.class";
 
-export class  deputy extends Human {
+export class  Deputy extends Human {
 
     surname: string;
     name: string;

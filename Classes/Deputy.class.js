@@ -11,9 +11,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Human_class_1 = require("./Human.class");
-var deputy = /** @class */ (function (_super) {
-    __extends(deputy, _super);
-    function deputy(weight, height, surname, name, age, corrupt, maxbribeSize, AccBribe) {
+var Deputy = /** @class */ (function (_super) {
+    __extends(Deputy, _super);
+    function Deputy(weight, height, surname, name, age, corrupt, maxbribeSize, AccBribe) {
         if (AccBribe === void 0) { AccBribe = 0; }
         var _this = _super.call(this, weight, height) || this;
         _this.surname = surname;
@@ -24,12 +24,12 @@ var deputy = /** @class */ (function (_super) {
         _this.AccBribe = AccBribe;
         return _this;
     }
-    deputy.prototype.getBribe = function (sum) {
+    Deputy.prototype.getBribe = function (sum) {
         if (!this.corrupt) {
             console.log('I dont get the bribes');
         }
         (sum <= this.maxbribeSize) ? (this.AccBribe += sum) : console.log('I can not take so much');
     };
-    return deputy;
+    return Deputy;
 }(Human_class_1.Human));
-exports.deputy = deputy;
+exports.Deputy = Deputy;
